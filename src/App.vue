@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <v-header />
+    <div class="main">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+
 export default {
-  name: 'App'
+  name: 'App',
+
+  components: {
+    'v-header': Header
+  },
+  created () {
+  }
 }
 </script>
 
 <style>
+@import "./assets/styles/variables.css";
+@import "./assets/styles/base.css";
+@import "./assets/styles/typography.css";
+@import "./assets/styles/utils.css";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
