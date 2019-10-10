@@ -72,7 +72,6 @@ export default {
   display: flex;
 }
 
-
 .header_menu .menu-hamburguer {
   display: none;
 }
