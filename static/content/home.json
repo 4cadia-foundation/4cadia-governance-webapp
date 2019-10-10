@@ -3,7 +3,7 @@
     "type": "list_hero",
     "content": {
       "title": "Governance Token",
-      "text": "<p><em>Let's build together the descentralized future</em></p>",
+      "text": "<p>Let's build together the <br>descentralized future</p>",
       "image": "",
       "logo": "./static/images/logo_white.svg"
     }
