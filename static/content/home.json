@@ -13,14 +13,17 @@
     "content": {
       "type": "square",
       "title": "What’s the token purpose?",
-      "text": "<p>The governance of the 4CADIA Foundation is divided through voting shares which grant voting rights to its owner and 4GT (4CADIA Governance Token) are required to interact with the smart contracts. 4GT are collateralized at 1:1 to voting shares of the 4CADIA Foundation and owners can use these tokens to vote on specific subjects, described in the 4CADIA Governance Contract. 4GT have a controlled supply mechanism and can be exchanged freely globally.</p>"
+      "text": "<p>The governance of the 4CADIA Foundation is divided through voting shares which grant voting rights to its owner and 4GT (4CADIA Governance Token) are required to interact with the smart contracts. 4GT are collateralized at 1:1 to voting shares of the 4CADIA Foundation and owners can use these tokens to vote on specific subjects, described in the 4CADIA Governance Contract. 4GT have a controlled supply mechanism and can be exchanged freely globally.</p>",
+      "containerClass": "text-left"
     }
   },  {
     "type": "list_paragraph",
     "content": {
       "type": "full",
       "title": "How I get the Token?",
-      "text": "<p>To purchase token is necessary to connect to one of the identity providers listed, make a registration in the platform, deposit the value in Ether and check the announced auctions. After choosing the auction, the member needs to place a blind offer of volume (in percentage) and price per token, during the bidding process anyone can change their bid (this period expires in 30 days). At the end of the auction, the highest bids (by price per token) are fulfilled until the amount of funds earned cover the forecasted costs.</p>"
+      "text": "<p>To purchase token is necessary to connect to one of the identity providers listed, make a registration in the platform, deposit the value in Ether and check the announced auctions. After choosing the auction, the member needs to place a blind offer of volume (in percentage) and price per token, during the bidding process anyone can change their bid (this period expires in 30 days). At the end of the auction, the highest bids (by price per token) are fulfilled until the amount of funds earned cover the forecasted costs.</p>",
+      "containerClass": "text-right"
+
     }
   },
   {
@@ -70,10 +73,35 @@
     }
   },
   {
-    "type": "list_paragraph",
+    "type": "roadmap",
     "content": {
       "title": "Roadmap",
-      "text": "See the next deliveries of our organization"
+      "text": "<p>See the next deliveries of our organizatino</p>",
+      "list": {
+        "data": [
+          {
+            "title": "Token 1.0 MVP",
+            "text": "<p>-Token created <br> -Members benefits</p>"
+          },
+          {
+            "title": "Token 1.0 + Auction ETH",
+            "text": "<p>-Token (without user ineraction, saft, frontend) <br> - Auction (simple auction only with ETH) <br> - Smartcontract tests <br> - Proxy <br> - Payment in Ether</p>"
+          },
+          {
+            "title": "Token 2.0 + Full Auction",
+            "text": "<p>- Token (proxy) <br> - Full auction <br> - Payment in Ether / Fiat / Paypal</p>"
+          },
+          {
+            "title": "Token 2.0 + Full Auction + Vote",
+            "text": "<p>- Token <br> - Full auction <br> - Vote</p>"
+          },
+          {
+            "title": "Token 2.0 + Full Auction + Vote + 2.0",
+            "text": "<p>- Token <br> - Full auction <br> - Vote 2.0</p>"
+          }
+        ]
+      }
+
     }
   }
 ]
