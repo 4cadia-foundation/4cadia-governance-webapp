@@ -2,7 +2,6 @@
   <div class="list-cards">
     <h2 class="list-title">{{list.title}}</h2>
     <div>
-      <img class="list-background-image" src="../assets/images/rectangle_card.png" />
       <ul :class="`list ${oddOrEven}`">
         <li :class="`item`" v-for="(item, index) in list.data" :key="index">
           <v-card ref="card" :cardType="list.type">
@@ -62,11 +61,6 @@ export default {
 .list-title {
   text-align: center;
   color: #071D49;
-}
-
-.list-background-image {
-  width: 86vw;
-  display: flex;
 }
 
 .list .item {
