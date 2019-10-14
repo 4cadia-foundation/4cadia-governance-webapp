@@ -52,6 +52,10 @@ export default {
 }
 </script>
 <style scoped>
+/* .item_icon item.icon:hover path {
+    fill: #fce57e;
+} */
+
 .list {
   display: flex;
   margin: auto;

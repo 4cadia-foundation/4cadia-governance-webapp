@@ -1,6 +1,6 @@
 <template>
   <div :class="`card shadow--light ${this.cardType}`">
-    <div v-if="this.$slots.header" class="card_content card_header">
+    <div v-if="this.$slots.header" class="card_content card_header card_logo">
       <slot name="header"></slot>
     </div>
     <div v-if="this.$slots.body" class="card_content card_body">
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'BaseCard',
+  name: 'BaseCardBlock',
   data () {
     return {
     }
@@ -37,6 +37,13 @@ export default {
 </script>
 
 <style>
+
+.card_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   padding: 40px 30px;
   text-align: center;
@@ -47,21 +54,9 @@ export default {
   border-radius: 4px;
   background: white;
 }
+
 .card h3 {
   margin: 1em auto;
-  color: #071D49;
-}
-
-.card:hover {
-  background: #071D49;
-  cursor: pointer;
-  color: #FFF;
-}
-
-/* WHY?? */
-.card h3:hover {
-    margin: 1em auto;
-    color: #FFF;
 }
 
 .card.full {
@@ -90,17 +85,5 @@ export default {
 }
 .card.full .card_footer p {
   margin: 10px 0 0 0;
-}
-.card.full .card_title .title {
-  margin: auto 0;
-}
-.card.full.success {
-  border-left-color: var(--color-green);
-}
-.card.full.alert {
-  border-left-color: var(--color-red);
-}
-.card.full.warn {
-  border-left-color: var(--color-yellow);
 }
 </style>

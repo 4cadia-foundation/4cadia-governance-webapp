@@ -1,30 +1,28 @@
 <template>
   <div class="list-cards">
     <h2 class="list-title">{{list.title}}</h2>
-    <div>
       <ul :class="`list ${oddOrEven}`">
         <li :class="`item`" v-for="(item, index) in list.data" :key="index">
-          <v-card ref="card" :cardType="list.type">
-            <template v-slot:header>
+          <v-card ref="card" :cardType="list.type" class="teste">
+            <template v-slot:header class="header_test">
               <img class="item_icon" v-if="item.icon" :src="item.icon">
-              <h3 class="title" v-html="item.title || capitalize"></h3>
             </template>
 
             <template v-slot:body>
+              <h3 class="title" v-html="item.title || capitalize"></h3>
               <div class="text" v-html="item.text"></div>
             </template>
           </v-card>
         </li>
       </ul>
     </div>
-  </div>
 </template>
 
 <script>
-import BaseCard from '@/components/BaseCard'
+import BaseCardBlock from '@/components/BaseCardBlock'
 
 export default {
-  name: 'CardList',
+  name: 'CardBlock',
   data () {
     return {
       oddOrEven: this.list.data.length % 2 === 0 ? 'even' : 'odd'
@@ -44,13 +42,33 @@ export default {
     }
   },
   components: {
-    'v-card': BaseCard
+    'v-card': BaseCardBlock
   },
   mounted () {
   }
 }
 </script>
 <style scoped>
+/* img {
+  width: 44vw;
+  padding: 60px 47px;
+} */
+
+.header_test {
+  width: 33%;
+}
+
+.header_test img {
+    width: 30vw;
+}
+
+.teste {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 40px 50px;
+}
+
 .list {
   display: flex;
   margin: auto;
@@ -64,9 +82,19 @@ export default {
 }
 
 .list .item {
-  flex: 31%;
-  max-width: 31%;
+  max-width: 100%;
   margin: 20px 0;
+}
+
+.title, .text {
+    text-align: left;
+}
+
+.title {
+  margin: 0px;
+  margin-bottom: 0.2em;
+  color: #071D49;
+  font-size: 35px;
 }
 
 .list.even {
@@ -80,8 +108,12 @@ export default {
 
 .item_icon {
   width: 6vw;
-  height: 6vw;
+  height: 10vw;
   position: relative;
+  width: 144px;
+  vertical-align: middle;
+  margin: 0px;
+  padding-right: 30px;
 }
 
 @media (max-width: 768px) {

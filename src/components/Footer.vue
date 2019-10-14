@@ -5,7 +5,6 @@
           <div class="logo">
             <img class="logo-image" :src="`${this.logo}`">
           </div>
-
           <div>
             <ul class="social-icons">
               <li><a href="#"><img src="../assets/icons/twitter.svg"/></a></li>
@@ -13,9 +12,8 @@
               <li><a href="#"><img src="../assets/icons/github.svg"/></a></li>
             </ul>
           </div>
-
       </div>
-</footer>
+    </footer>
   </div>
 </template>
 
