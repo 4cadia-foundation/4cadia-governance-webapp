@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import BaseCardBlock from '@/components/BaseCardBlock'
+import BaseCard from '@/components/BaseCard'
 
 export default {
   name: 'CardBlock',
@@ -42,7 +42,7 @@ export default {
     }
   },
   components: {
-    'v-card': BaseCardBlock
+    'v-card': BaseCard
   },
   mounted () {
   }

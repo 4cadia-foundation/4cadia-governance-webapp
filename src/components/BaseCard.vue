@@ -54,14 +54,17 @@ export default {
 
 .card:hover {
   background: #071D49;
+  color: white;
   cursor: pointer;
-  color: #FFF;
 }
 
-/* WHY?? */
-.card h3:hover {
-    margin: 1em auto;
-    color: #FFF;
+.card:hover h3 {
+  color: #FFF;
+  cursor: pointer;
+}
+
+.card:hover img {
+  filter: brightness(100);
 }
 
 .card.full {

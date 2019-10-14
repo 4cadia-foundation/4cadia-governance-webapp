@@ -1,5 +1,5 @@
 <template>
-  <div :class="`card shadow--light ${this.cardType}`">
+  <div :class="`shadow--light ${this.cardType}`">
     <div v-if="this.$slots.header" class="card_content card_header card_logo">
       <slot name="header"></slot>
     </div>

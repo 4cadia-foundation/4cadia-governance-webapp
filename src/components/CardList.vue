@@ -2,7 +2,7 @@
   <div class="list-cards">
     <h2 class="list-title">{{list.title}}</h2>
     <div>
-      <img class="list-background-image" src="../assets/images/rectangle_card.png" />
+      <!-- <img class="list-background-image" src="../assets/images/rectangle_card.png" /> -->
       <ul :class="`list ${oddOrEven}`">
         <li :class="`item`" v-for="(item, index) in list.data" :key="index">
           <v-card ref="card" :cardType="list.type">
@@ -55,12 +55,24 @@ export default {
 /* .item_icon item.icon:hover path {
     fill: #fce57e;
 } */
+.list-cards {
+  max-width: 80%;
+  margin: auto;
+}
+
+li:hover {
+  color: #FFF;
+}
 
 .list {
   display: flex;
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-image: url("../assets/images/rectangle_card.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 100px 0;
 }
 
 .list-title {
@@ -69,8 +81,10 @@ export default {
 }
 
 .list-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 86vw;
-  display: flex;
 }
 
 .list .item {
