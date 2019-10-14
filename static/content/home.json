@@ -76,28 +76,28 @@
     "type": "roadmap",
     "content": {
       "title": "Roadmap",
-      "text": "<p>See the next deliveries of our organizatino</p>",
+      "text": "<p>See the next deliveries of our organization</p>",
       "list": {
         "data": [
           {
             "title": "Token 1.0 MVP",
-            "text": "<p>-Token created <br> -Members benefits</p>"
+            "text": "<p1>-Token created <br> -Members benefits</p1>"
           },
           {
             "title": "Token 1.0 + Auction ETH",
-            "text": "<p>-Token (without user ineraction, saft, frontend) <br> - Auction (simple auction only with ETH) <br> - Smartcontract tests <br> - Proxy <br> - Payment in Ether</p>"
+            "text": "<p2>-Token (without user ineraction, saft, frontend) <br> - Auction (simple auction only with ETH) <br> - Smartcontract tests <br> - Proxy <br> - Payment in Ether</p2>"
           },
           {
             "title": "Token 2.0 + Full Auction",
-            "text": "<p>- Token (proxy) <br> - Full auction <br> - Payment in Ether / Fiat / Paypal</p>"
+            "text": "<p3>- Token (proxy) <br> - Full auction <br> - Payment in Ether / Fiat / Paypal</p3>"
           },
           {
             "title": "Token 2.0 + Full Auction + Vote",
-            "text": "<p>- Token <br> - Full auction <br> - Vote</p>"
+            "text": "<p4>- Token <br> - Full auction <br> - Vote</p4>"
           },
           {
             "title": "Token 2.0 + Full Auction + Vote + 2.0",
-            "text": "<p>- Token <br> - Full auction <br> - Vote 2.0</p>"
+            "text": "<p5>- Token <br> - Full auction <br> - Vote 2.0</p5>"
           }
         ]
       }
