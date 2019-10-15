@@ -3,8 +3,8 @@
     <h2 class="list-title">{{list.title}}</h2>
       <ul :class="`list ${oddOrEven}`">
         <li :class="`item `" v-for="(item, index) in list.data" :key="index">
-          <v-card ref="card" class="teste">
-            <template v-slot:header class="header_test">
+          <v-card ref="card" class="card-block">
+            <template v-slot:header>
               <img class="item_icon" v-if="item.icon" :src="item.icon">
             </template>
 
@@ -131,7 +131,7 @@ li:hover {
   padding-right: 35px;
 }
 
-.list-cards.full .teste{
+.list-cards.full .card-block{
   display: flex;
   justify-content: space-between;
   flex-direction: row;
