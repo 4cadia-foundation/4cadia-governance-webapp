@@ -11,9 +11,6 @@
       <div class="row" v-if="block['type']=='list_card'">
         <v-cards-list :list="block['content']" />
       </div>
-      <div class="row" v-if="block['type']=='card_block'">
-        <v-card-block :list="block['content']" />
-      </div>
     </div>
   </div>
 </template>
@@ -23,7 +20,6 @@ import contentService from '../api/contentService'
 import Hero from '@/components/Hero'
 import Paragraph from '@/components/Paragraph'
 import CardList from '@/components/CardList'
-import CardBlock from '@/components/CardBlock'
 
 export default {
   name: 'Home',
@@ -35,8 +31,7 @@ export default {
   components: {
     'v-hero': Hero,
     'v-cards-list': CardList,
-    'v-paragraph': Paragraph,
-    'v-card-block': CardBlock
+    'v-paragraph': Paragraph
   },
   mounted: function () {
     contentService('home').then((response) => {

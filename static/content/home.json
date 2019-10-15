@@ -47,7 +47,7 @@
     }
   },
   {
-    "type": "card_block",
+    "type": "list_card",
     "content": {
       "title": "Interaction",
       "type": "full",

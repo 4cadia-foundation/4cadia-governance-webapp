@@ -52,28 +52,15 @@ export default {
   color: #071D49;
 }
 
-.card:hover {
-  background: #071D49;
-  color: white;
-  cursor: pointer;
-}
-
-.card:hover h3 {
-  color: #FFF;
-  cursor: pointer;
-}
-
-.card:hover img {
-  filter: brightness(100);
-}
-
 .card.full {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: 30px 60px;
   border-radius: 8px;
   border-left-width: 10px;
   flex-flow: row wrap;
+  flex-direction: row;
 }
 .card.full .card_content {
   margin: auto 0;
