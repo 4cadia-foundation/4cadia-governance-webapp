@@ -54,7 +54,7 @@ export default {
 }
 .menu-item a {
   text-decoration: none;
-  color: var(--color-gray);
+  color: #C6CACC;
 }
 .menu-item a:hover {
   color: var(--color-blue);
