@@ -3,6 +3,11 @@
   overflow: hidden;
 }
 
+.col {
+  clear: both;
+  float: none;
+}
+
 .row {
   position: relative;
 }
@@ -141,4 +146,16 @@
 
 .inline {
   display: inline;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
