@@ -12,7 +12,6 @@ import Header from '@/components/Header'
 
 export default {
   name: 'App',
-
   components: {
     'v-header': Header
   },

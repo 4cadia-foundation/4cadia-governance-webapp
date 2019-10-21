@@ -75,5 +75,12 @@
       "title": "Roadmap",
       "text": "See the next deliveries of our organization"
     }
+  },
+  {
+    "type": "newsletter",
+    "content": {
+      "title": "Join the community",
+      "text": "We try to avoid spam and deliver things that matter"
+    }
   }
 ]

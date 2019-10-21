@@ -7,10 +7,10 @@
     {
       "title": "About",
       "path": "/about"
-  },
+    },
     {
-        "title": "Manifesto",
-        "path": "/manifesto"
+      "title": "Manifesto",
+      "path": "/manifesto"
     },
     {
       "title": "FAQ",
@@ -18,5 +18,5 @@
     }
   ],
   "logo": "/static/images/logo_white.svg",
-  "title": ""
+  "title": "4CADIA"
 }
