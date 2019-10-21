@@ -53,6 +53,7 @@
     "type": "list_card",
     "content": {
       "title": "Interaction",
+      "type": "full",
       "data": [
         {
           "icon": "./static/images/governance.svg",

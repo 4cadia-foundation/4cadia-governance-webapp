@@ -4,17 +4,23 @@
     <div class="main">
       <router-view />
     </div>
+    <div>
+      <v-footer/>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
 
   components: {
-    'v-header': Header
+    'v-header': Header,
+    'v-footer': Footer
+
   },
   created () {
   }
