@@ -39,6 +39,8 @@ export default {
 <style scoped>
 .roadmap {
   display: inline-block;
+  text-align: center;
+  margin: 0 auto 6vw;
 }
 .roadmap-title {
   color:#071D49;

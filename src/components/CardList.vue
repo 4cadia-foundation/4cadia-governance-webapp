@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .list-cards {
   max-width: 80%;
-  margin: auto;
+  margin: 2vw auto 12vw;
 }
 
 li:hover {
@@ -85,21 +85,26 @@ li:hover {
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-image: url("../assets/images/rectangle_card.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  position: relative;
+  margin-top: 6vw;
+}
+
+.list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: matrix(-0.99, 0.18, -0.16, -0.98, 0, 0);
+  background: linear-gradient(90deg, #5BD0E4 0%, #255FAA 100%);
+  border-radius: 50px;
+  background-size: contain;
 }
 
 .list-title {
   text-align: center;
   color: #071D49;
-}
-
-.list-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 86vw;
 }
 
 .list .item {
@@ -125,21 +130,23 @@ li:hover {
 .list-cards.full .item_icon {
   height: 8vw;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-right: 35px;
 }
 
-.list-cards.full .card-block{
+.list-cards.full .card_header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-cards.full .card-block {
+  display: flex;
   flex-direction: row;
   padding: 40px 50px;
   border-radius: 10px;
 }
 
-.list-cards.full .item{
+.list-cards.full .item {
   flex: 100%;
   max-width: 100%;
   margin: 20px 0;
@@ -171,20 +178,39 @@ li:hover {
   filter: brightness();
 }
 
-.list-cards.full .list {
-    background-image: none;
-
+.list-cards.full .list:before {
+  background: none;
 }
 
 @media (max-width: 768px) {
+  .list-cards {
+    margin: 0;
+    max-width: 100%;
+  }
+
   .list {
     flex-direction: column;
+    padding: 6vw 10vw;
+  }
+
+  .list::before {
+    transform: none;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    height: 80%;
+    margin: auto;
   }
 
   .list .item {
     width: auto !important;
     margin-bottom: 10px;
     max-width: none;
+  }
+
+  .list-cards.full .card-block {
+    flex-direction: column;
+    text-align: center;
   }
 }
 </style>

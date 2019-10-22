@@ -96,3 +96,19 @@ a {
   font-weight: 500;
   color: var(--color-gray);
 }
+
+@media (max-width: 768px) {
+  p,
+  .actions,
+  .highlight,
+  .invalid
+  a {
+    font-size: 1.25em;
+    /* font-size: 22.50px */
+  }
+
+  button {
+    font-size: 1em;
+    /* font-size: 18px */
+  }
+}
