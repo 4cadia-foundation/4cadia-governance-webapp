@@ -52,13 +52,13 @@ export default {
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
-  background: white;
+  background: #071D49;
 }
 .header_logo {
   text-decoration: none;
 }
 .header_logo .logo {
-  width: 25px;
+  width: 144px;
 }
 .header_logo .logo,
 .header_logo .title {
@@ -71,6 +71,7 @@ export default {
 .header_menu {
   display: flex;
 }
+
 .header_menu .menu-hamburguer {
   display: none;
 }

@@ -49,14 +49,18 @@ export default {
 }
 .card h3 {
   margin: 1em auto;
+  color: #071D49;
 }
+
 .card.full {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: 30px 60px;
   border-radius: 8px;
   border-left-width: 10px;
   flex-flow: row wrap;
+  flex-direction: row;
 }
 .card.full .card_content {
   margin: auto 0;

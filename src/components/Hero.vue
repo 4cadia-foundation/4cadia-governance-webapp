@@ -42,6 +42,10 @@ export default {
 }
 </script>
 <style scoped>
+.content--text img {
+  width: 30vw;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -101,12 +105,16 @@ export default {
 
 .hero .content--text .title {
   color: white;
-  margin-top: 0;
+  margin: 49.5px 0;
 }
 
 .hero .content--text .text {
   color: var(--color-white);
-  text-align: center;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35.16px;
+  line-height: 48px;
 }
 
 .hero .content--image,

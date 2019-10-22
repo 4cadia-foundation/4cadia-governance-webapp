@@ -3,12 +3,17 @@
   overflow: hidden;
 }
 
+.col {
+  clear: both;
+  float: none;
+}
+
 .row {
   position: relative;
 }
 
 .row:not(.row--full) {
-  padding: 3vw 60px;
+  /* padding: 3vw 60px; */
 }
 
 .logo {
@@ -141,4 +146,16 @@
 
 .inline {
   display: inline;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
