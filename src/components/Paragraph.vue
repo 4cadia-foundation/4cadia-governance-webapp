@@ -79,4 +79,20 @@ export default {
 .paragraph.paragraph.text-right .content-text .title{
   color:#0047BB;
 }
+
+@media (max-width: 768px) {
+  .paragraph {
+    padding: 0 60px;
+  }
+
+  .paragraph .content-text {
+    max-width: 100%;
+  }
+
+  .paragraph:before {
+    width: 120%;
+    z-index: -1;
+    opacity: .3;
+  }
+}
 </style>

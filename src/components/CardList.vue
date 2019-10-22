@@ -5,7 +5,9 @@
         <li :class="`item `" v-for="(item, index) in list.data" :key="index">
           <v-card ref="card" class="card-block">
             <template v-slot:header>
-              <img class="item_icon" v-if="item.icon" :src="item.icon">
+              <div class="item_icon">
+                <img class="icon" v-if="item.icon" :src="item.icon">
+              </div>
             </template>
 
             <template v-slot:body>
@@ -122,21 +124,23 @@ li:hover {
   max-width: 48%;
 }
 
-.item_icon {
-  height: 8vw;
-  position: relative;
-}
-
 .list-cards.full .item_icon {
-  height: 8vw;
-  position: relative;
-  padding-right: 35px;
-}
-
-.list-cards.full .card_header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  margin-right: 35px;
+}
+
+.list-cards .icon {
+  height: 8vw;
+  position: relative;
+}
+
+.list-cards.full .icon {
+  height: 8vw;
+  position: relative;
+  margin: auto;
 }
 
 .list-cards.full .card-block {
@@ -210,7 +214,20 @@ li:hover {
 
   .list-cards.full .card-block {
     flex-direction: column;
+  }
+
+  .list-cards.full .card-block .title,
+  .list-cards.full .card-block .text {
     text-align: center;
+  }
+
+  .list-cards.full .item_icon {
+    margin: 0 0 30px 0;
+  }
+
+  .list-cards .icon,
+  .list-cards.full .icon {
+    height: 15vw;
   }
 }
 </style>
