@@ -2,7 +2,7 @@
   <div class="roadmap">
     <h2 class="roadmap-title">{{content.title}}</h2>
     <h3 class="roadmap-text" v-if="content.text" v-html="content.text"></h3>
-    <img src="/static/images/Timeline.png" alt="Time Line">
+    <img src="/static/images/Timeline.png" alt="Time Line" class="roadmap-img">
     <ul :class="`list`">
       <li :class="`item`" v-for="(item, index) in content.list.data" :key="index">
         <h3 class="title" v-html="item.title || capitalize"></h3>
@@ -39,6 +39,9 @@ export default {
 <style scoped>
 .roadmap {
   display: inline-block;
+  text-align: center;
+  margin: 0 auto 6vw;
+  width: 100%;
 }
 .roadmap-title {
   color:#071D49;
@@ -49,16 +52,27 @@ export default {
   max-width: 15.5%;
   text-align: left;
 }
-.title{
+.title {
   font-size: 1.2em;
 }
 .item:nth-child(odd) {
-    color:#0047BB;
+  color:#0047BB;
 }
 .item:nth-child(even) {
-    color:#071D49;
+  color:#071D49;
 }
 .text {
   color: black;
+}
+
+@media (max-width: 768px) {
+  .roadmap-img {
+    display: none
+  }
+  .item {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+  }
 }
 </style>

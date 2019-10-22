@@ -13,7 +13,7 @@
 }
 
 .row:not(.row--full) {
-  padding: 3vw 60px;
+  /* padding: 3vw 60px; */
 }
 
 .logo {

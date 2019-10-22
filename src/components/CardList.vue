@@ -5,7 +5,9 @@
         <li :class="`item `" v-for="(item, index) in list.data" :key="index">
           <v-card ref="card" class="card-block">
             <template v-slot:header>
-              <img class="item_icon" v-if="item.icon" :src="item.icon">
+              <div class="item_icon">
+                <img class="icon" v-if="item.icon" :src="item.icon">
+              </div>
             </template>
 
             <template v-slot:body>
@@ -54,7 +56,7 @@ export default {
 <style scoped>
 .list-cards {
   max-width: 80%;
-  margin: auto;
+  margin: 2vw auto 12vw;
 }
 
 li:hover {
@@ -85,21 +87,26 @@ li:hover {
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-image: url("../assets/images/rectangle_card.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  position: relative;
+  margin-top: 6vw;
+}
+
+.list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: matrix(-0.99, 0.18, -0.16, -0.98, 0, 0);
+  background: linear-gradient(90deg, #5BD0E4 0%, #255FAA 100%);
+  border-radius: 50px;
+  background-size: contain;
 }
 
 .list-title {
   text-align: center;
   color: #071D49;
-}
-
-.list-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 86vw;
 }
 
 .list .item {
@@ -117,29 +124,33 @@ li:hover {
   max-width: 48%;
 }
 
-.item_icon {
-  height: 8vw;
-  position: relative;
-}
-
 .list-cards.full .item_icon {
-  height: 8vw;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 35px;
+  height: 100%;
+  margin-right: 35px;
 }
 
-.list-cards.full .card-block{
+.list-cards .icon {
+  height: 8vw;
+  position: relative;
+}
+
+.list-cards.full .icon {
+  height: 8vw;
+  position: relative;
+  margin: auto;
+}
+
+.list-cards.full .card-block {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   padding: 40px 50px;
   border-radius: 10px;
 }
 
-.list-cards.full .item{
+.list-cards.full .item {
   flex: 100%;
   max-width: 100%;
   margin: 20px 0;
@@ -171,20 +182,52 @@ li:hover {
   filter: brightness();
 }
 
-.list-cards.full .list {
-    background-image: none;
-
+.list-cards.full .list:before {
+  background: none;
 }
 
 @media (max-width: 768px) {
+  .list-cards {
+    margin: 0;
+    max-width: 100%;
+  }
+
   .list {
     flex-direction: column;
+    padding: 6vw 10vw;
+  }
+
+  .list::before {
+    transform: none;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    height: 80%;
+    margin: auto;
   }
 
   .list .item {
     width: auto !important;
     margin-bottom: 10px;
     max-width: none;
+  }
+
+  .list-cards.full .card-block {
+    flex-direction: column;
+  }
+
+  .list-cards.full .card-block .title,
+  .list-cards.full .card-block .text {
+    text-align: center;
+  }
+
+  .list-cards.full .item_icon {
+    margin: 0 0 30px 0;
+  }
+
+  .list-cards .icon,
+  .list-cards.full .icon {
+    height: 15vw;
   }
 }
 </style>

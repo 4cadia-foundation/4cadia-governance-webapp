@@ -28,34 +28,48 @@ export default {
 .paragraph {
   position: relative;
   margin: auto;
-  padding: 10px 30px;
+  padding: 100px 150px;
   align-items: center;
   float: none;
   clear: both;
-  background-repeat: no-repeat;
   display: flex;
-  background-size: contain;
-}
-
-.paragraph.text-left {
- /*float: left;*/
- text-align: left;
- justify-content: flex-start;
- background-image: url("../assets/images/symbol-group-a.svg");
- background-position: 115% center;
-
 }
 
 .paragraph .content-text {
-  max-width: 52%;
+  max-width: 50%;
+}
+
+.paragraph:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.paragraph.text-left:before {
+ background-image: url("../assets/images/symbol-group-a.svg");
+ right: -100px;
+ background-position: 100%;
+}
+
+.paragraph.text-right:before {
+ background-image: url("../assets/images/symbol-group-c.svg");
+ left: -100px;
+ background-position: 0;
+}
+
+.paragraph.text-left {
+ text-align: left;
+ justify-content: flex-start;
 }
 
 .paragraph.text-right {
- /*float: right;*/
  text-align: right;
  justify-content: flex-end;
- background-image: url("../assets/images/symbol-group-c.svg");
- background-position: -8% center;
 }
 
 .paragraph.paragraph.text-left .content-text .title{
@@ -64,5 +78,21 @@ export default {
 
 .paragraph.paragraph.text-right .content-text .title{
   color:#0047BB;
+}
+
+@media (max-width: 768px) {
+  .paragraph {
+    padding: 0 60px;
+  }
+
+  .paragraph .content-text {
+    max-width: 100%;
+  }
+
+  .paragraph:before {
+    width: 120%;
+    z-index: -1;
+    opacity: .3;
+  }
 }
 </style>
