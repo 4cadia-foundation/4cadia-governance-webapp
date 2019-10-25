@@ -80,24 +80,24 @@
       "list": {
         "data": [
           {
-            "title": "Token 1.0 MVP",
-            "text": "<p1>-Token created <br> -Members benefits</p1>"
+            "title": "Initial Release",
+            "text": "<p1>-Token in MainNet <br> -Store in wallet <br> -Transact</p1>"
           },
           {
-            "title": "Token 1.0 + Auction ETH",
-            "text": "<p2>-Token (without user ineraction, saft, frontend) <br> - Auction (simple auction only with ETH) <br> - Smartcontract tests <br> - Proxy <br> - Payment in Ether</p2>"
+            "title": "Auction (Beta)",
+            "text": "<p2>-Interactive Token <br> - Auction (ETH only) <br> -Token smart contract proxy <br> - Payment in ETH </p2>"
           },
           {
-            "title": "Token 2.0 + Full Auction",
-            "text": "<p3>- Token (proxy) <br> - Full auction <br> - Payment in Ether / Fiat / Paypal</p3>"
+            "title": "Auction Release",
+            "text": "<p3>-Account <br> -View auction <br> -Manage bids <br> -Payment in Crypto and Fiat</p3>"
           },
           {
-            "title": "Token 2.0 + Full Auction + Vote",
-            "text": "<p4>- Token <br> - Full auction <br> - Vote</p4>"
+            "title": "Governance",
+            "text": "<p4>-Vote Yes/No <br> -Vote cadidates <br> -Vote until threshold</p4>"
           },
           {
-            "title": "Token 2.0 + Full Auction + Vote + 2.0",
-            "text": "<p5>- Token <br> - Full auction <br> - Vote 2.0</p5>"
+            "title": "Automation",
+            "text": "<p5>-Governance integration <br> -Smart contracts interoperability</p5>"
           }
         ]
       }
