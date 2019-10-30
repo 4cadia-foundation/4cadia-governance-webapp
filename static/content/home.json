@@ -72,6 +72,12 @@
         }
       ]
     }
+  }, {
+    "type": "call_to_action",
+    "content": {
+      "title": "Be part of this project",
+      "text": "<p>You can buy tokens and participate of our <br>organization or help with our open source code</p>"
+    }
   },
   {
     "type": "roadmap",
