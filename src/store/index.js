@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import validation from './modules/validation'
+import registerWeb3 from 'vuex-web3'
 
 Vue.use(Vuex)
 
@@ -12,5 +13,7 @@ const vuexStore = new Vuex.Store({
   },
   strict: debug
 })
+
+registerWeb3(vuexStore, 'w3')
 
 export default vuexStore
