@@ -6,8 +6,8 @@
       <p class="text" v-if="calltoaction.text" v-html="calltoaction.text"></p>
 
       <div>
-        <button id="btn-buy-token" type="submit">Buy 4GT Tokens</button>
-        <button id="btn-support" type="submit">Support Project</button>
+        <button @click="msg" id="btn-buy-token" type="submit">Buy 4GT Tokens</button>
+        <button   id="btn-support" type="submit">Support Project</button>
       </div>
     </div>
         <img src="../assets/images/nodes.png" alt="node picture" />
@@ -17,16 +17,18 @@
 
 <script>
 export default {
-  name: "CallToAction",
-  data() {
-    return {};
-  },
+  name: 'CallToAction',
   props: {
     calltoaction: {
       type: Object
     }
+  },
+  methods: {
+    msg () {
+      alert('Call to Action')
+    }
   }
-};
+}
 </script>
 
 <style scoped>
