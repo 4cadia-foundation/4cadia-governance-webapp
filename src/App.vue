@@ -9,14 +9,12 @@
 
 <script>
 import Header from '@/components/Header'
-import ImplementWeb3 from './components/ImplementWeb3'
 
 export default {
   name: 'App',
 
   components: {
-    'v-header': Header,
-    'v-implementWeb3': ImplementWeb3
+    'v-header': Header
   },
   created () {
   }
