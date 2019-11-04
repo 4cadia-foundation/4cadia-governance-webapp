@@ -6,7 +6,7 @@
       <p class="text" v-if="calltoaction.text" v-html="calltoaction.text"></p>
 
       <div>
-        <button @click="msg" id="btn-buy-token" type="submit">Buy 4GT Tokens</button>
+        <button @click="callContract" id="btn-buy-token" type="button">Buy 4GT Tokens</button>
         <button   id="btn-support" type="submit">Support Project</button>
       </div>
     </div>
@@ -16,6 +16,10 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import contract from '../../contract.json'
+import {ethers} from 'ethers'
+
 export default {
   name: 'CallToAction',
   props: {
@@ -23,9 +27,31 @@ export default {
       type: Object
     }
   },
+  data () {
+    return {
+      wallet: ''
+    }
+  },
+  mounted () {
+    this.wallet = ''
+  },
+  computed: {
+    ...mapState({
+      address: state => state.w3.address,
+      w3: state => state.w3.instance
+
+    })
+  },
   methods: {
-    msg () {
-      alert('Call to Action')
+    callContract () {
+      console.log()
+      let provider = new ethers.providers.Web3Provider(this.w3().currentProvider)
+      let signer = provider.getSigner(0)
+      let contractInstance = new ethers.Contract(contract.address, contract.abi, signer)
+      var sendTransactionPromise = contractInstance.set(123)
+      sendTransactionPromise.then(function (tx) {
+        console.log(tx)
+      })
     }
   }
 }
