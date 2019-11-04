@@ -61,7 +61,7 @@ npm lint
 
 - [Git Workflow](./docs/workflow.md)
 - [Semantic Versioning](./docs/semantic-versioning.md)
-- [Structure Repository](./docs/software-structure.md)
+<!-- - [Structure Repository](./docs/software-structure.md) -->
 - [Code Quality](./docs/code-quality.md)
 
 ## Changelog
@@ -70,13 +70,13 @@ Detailed changes for each release are documented in the [release notes](https://
 
 ## Contribution
 
-Please make sure to read the [Contributing Guide](https://github.com/4cadia-foundation/4cadia-governance-webapp/blob/dev/.github/CONTRIBUTING.md) before making a pull request. Issues not conforming to the guidelines may be closed.
+Please make sure to read the [Contributing Guide](./CONTRIBUTING.md) before making a pull request. Issues not conforming to the guidelines may be closed.
 
 
 ## Community
 
 ### Support
-For questions and support please read our our [support document](https://github.com/4cadia-foundation/4cadia-governance-webapp/blob/master/docs/support.md) and use the [community chat](https://gitter.im/4cadia-org/community). The issue list of this repo is **exclusively** for bug reports and feature requests.
+For questions and support please read our our [support document](./docs/support.md) and use the [community chat](https://gitter.im/4cadia-org/community). The issue list of this repo is **exclusively** for bug reports and feature requests.
 
 ### Sponsor
 
