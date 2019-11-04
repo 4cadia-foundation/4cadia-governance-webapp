@@ -4,8 +4,9 @@
 
     <transition name="fade">
       <div v-if="modal" class="modal-action">
-        <div class="modal-wrapper" @click="$emit('close')">
+        <div class="modal-wrapper">
           <div class="box-modal">
+            <button class="btn--icon btn--close" @click="modalAction()"></button>
             <h2>
               One step
               <span>closer</span> to be part of 4cadia Governance!
@@ -50,13 +51,9 @@ export default {
   },
   methods: {
     modalAction () {
-      if (this.modal === false) {
-        this.modal = true
-      } else {
-        this.modal = false
-      }
+      this.modal = !this.modal
     },
-    quotationTota () {
+    quotationTotal () {
       var token = document.getElementById('token-amount').value
       var amount = document.getElementById('contribution-value').value
       var total = token * amount
