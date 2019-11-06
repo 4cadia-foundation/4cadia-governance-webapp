@@ -32,7 +32,7 @@
                 <input id="contribution-value" type="number" step="0.10" placeholder="e.g: 110 ETH" />
               </div>
             </div>
-            <button class="btn-modal" @click="quotationTotal()">Start Transaction</button>
+            <button class="btn-modal" @click="callContract()">Start Transaction</button>
           </div>
         </div>
       </div>
@@ -41,6 +41,10 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import contract from '../../contract.json'
+import {ethers} from 'ethers'
+
 export default {
   name: 'CallToActionModal',
   components: {},
@@ -48,6 +52,13 @@ export default {
     return {
       modal: false
     }
+  },
+  computed: {
+    ...mapState({
+      address: state => state.w3.address,
+      w3: state => state.w3.instance
+
+    })
   },
   methods: {
     modalAction () {
@@ -58,6 +69,16 @@ export default {
       var amount = document.getElementById('contribution-value').value
       var total = token * amount
       console.log(total)
+    },
+    callContract () {
+      console.log()
+      let provider = new ethers.providers.Web3Provider(this.w3().currentProvider)
+      let signer = provider.getSigner(0)
+      let contractInstance = new ethers.Contract(contract.address, contract.abi, signer)
+      var sendTransactionPromise = contractInstance.set(123)
+      sendTransactionPromise.then(function (tx) {
+        console.log(tx)
+      })
     }
   }
 }

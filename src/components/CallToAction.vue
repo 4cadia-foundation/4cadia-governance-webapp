@@ -25,11 +25,6 @@ export default {
     calltoaction: {
       type: Object
     }
-  },
-  methods: {
-    msg () {
-      alert('Call to Action')
-    }
   }
 }
 </script>
